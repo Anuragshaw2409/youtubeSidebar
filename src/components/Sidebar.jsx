@@ -1,7 +1,7 @@
 import React from "react";
 import Youtube from "../assets/Youtube.png";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [fullSideBar, setFullSideBar] = useState(true);
@@ -28,7 +28,7 @@ const Sidebar = () => {
             }
           >
             <i className="ri-home-4-line"></i>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li
             className={
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 : "links flex"
             }
           >
-            <i className="ri-flashlight-line"></i> <a href="/shorts">Shorts</a>
+            <i className="ri-flashlight-line"></i> <Link to="/shorts">Shorts</Link>
           </li>
           <li
             className={
@@ -47,7 +47,7 @@ const Sidebar = () => {
             }
           >
             <i className="ri-airplay-line"></i>
-            <a href="/subscriptions">Subscriptions</a>
+            <Link to="/subscriptions">Subscriptions</Link>
           </li>
         </ul>
       </div>
@@ -62,7 +62,7 @@ const Sidebar = () => {
             }
           >
             <i className="ri-booklet-fill"></i> 
-            <a href="/library">Library</a>
+            <Link to="/library">Library</Link>
           </li>
           <li
             className={
@@ -73,7 +73,7 @@ const Sidebar = () => {
           >
             {" "}
             <i className="ri-time-line"></i>
-            <a href="/history">History</a>
+            <Link to="/history">History</Link>
           </li>
           <li
             className={
@@ -84,7 +84,7 @@ const Sidebar = () => {
           >
             {" "}
             <i className="ri-play-list-line"></i>
-            <a href="/yourvideos">Your Videos</a>
+            <Link to="/yourvideos">Your Videos</Link>
           </li>
           <li
             className={
@@ -95,7 +95,7 @@ const Sidebar = () => {
           >
             {" "}
             <i className="ri-time-line"></i>
-            <a href="/watchlater">Watch Later</a>
+            <Link to="/watchlater">Watch Later</Link>
           </li>
           <li
             className={
@@ -106,7 +106,7 @@ const Sidebar = () => {
           >
             {" "}
             <i className="ri-heart-line"></i>
-            <a href="/likedvideos">Liked Videos</a>
+            <Link to="/likedvideos">Liked Videos</Link>
           </li>
         </ul>
       </div>
