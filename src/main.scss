@@ -1,0 +1,341 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+body{
+    // overflow: hidden;
+    font-family: 'General sans';
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vw;
+    }
+h1{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sidebar{
+    position: absolute;
+    // border: 2px solid black;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    color: black;
+    // border: 2px solid black;
+    height: 100vh;
+    width: 250px;
+    transition: 0.3s all;
+
+    .logoContainer{
+        transition: 0.3s all;
+        display: flex;
+        width: 100%;
+        z-index: 9;
+        align-items: center;
+        .burgerButton{
+            position: relative;
+            margin: 15px 25px;
+            
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            
+            
+            cursor: pointer;
+            
+            
+            
+            .bars{
+                position: absolute;
+                height: 2px;
+                width: 25px;
+                background-color: black;
+                top: 18px;
+                left: 6px;
+                border-radius: 2px;
+
+                
+            }
+            .bars::before{
+                content: '';
+                position: absolute;
+                top: 8px;
+                height: 2px;
+                width: 100%;
+                background-color: black;
+                border-radius: 2px;
+                z-index: 99;
+
+            }
+            .bars::after{
+                content: '';
+                position: absolute;
+                top: -8px;
+                height: 2px;
+                width: 100%;
+                background-color: black;
+                border-radius: 2px;
+                z-index: 99;
+
+            }
+
+        }
+        .burgerButton:hover{
+            background-color: lightgray;
+        }
+        
+
+       
+        img{
+            transition-delay: 0.5s;
+            transition: 0.3s all;
+            // margin-left: 50px;
+            width: 125px;
+            height: auto;
+        }
+        
+    }
+
+    .homeContainer{
+        transition: 0.3s all;
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+
+        ul{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 15px;
+        }
+        
+        .links{
+           
+            transition: 0.3s all;
+            width: 80%;
+            font-size: 1rem;
+            margin-left: 20px;
+            padding: 3px 4px;
+            column-gap: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            a{
+                color: black;
+            }
+        }
+        ul>li>i{
+            font-size: 1.5rem;
+        }
+    }
+    .homeContainer::after{
+        transition: 0.3s all;
+        content: '';
+        height: 1px;
+        position: absolute;
+        background-color: black;
+        bottom: -20px;
+        left: 15px;
+        width: 90%;
+        border-radius: 5px;
+
+    }
+
+
+    .libraryContainer{
+        transition: 0.3s all;
+        width: 100%;
+        margin-top: 40PX;
+        position: relative;
+
+        ul{
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 15px;
+        }
+        
+        .links{
+            transition: 0.3s all;
+            width: 80%;
+            font-size: 1rem;
+            margin-left: 20px;
+            padding: 3px 4px;
+            column-gap: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            a{
+                color: black;
+            }
+            
+        }
+        ul>li>i{
+            font-size: 1.5rem;
+        }
+    }
+    .links:hover{
+        background-color: lightgray;
+
+    }
+
+}
+
+
+
+.sidebarActive{
+    transition: 0.3s all;
+    position: absolute;
+    // border: 2px solid black;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    color: black;
+    // border: 2px solid black;
+    height: 100vh;
+    width: 100px;
+
+    .logoContainer{
+        display: flex;
+        width: 100%;
+        z-index: 9;
+        align-items: center;
+        .burgerButton{
+            position: relative;
+            margin: 15px 25px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            
+            
+            
+            .bars{
+                position: absolute;
+                height: 2px;
+                width: 25px;
+                background-color: black;
+                top: 18px;
+                left: 6px;
+                border-radius: 2px;
+
+                
+            }
+            .bars::before{
+                content: '';
+                position: absolute;
+                top: 8px;
+                height: 2px;
+                width: 100%;
+                background-color: black;
+                border-radius: 2px;
+                z-index: 99;
+
+            }
+            .bars::after{
+                content: '';
+                position: absolute;
+                top: -8px;
+                height: 2px;
+                width: 100%;
+                background-color: black;
+                border-radius: 2px;
+                z-index: 99;
+
+            }
+
+        }
+        .burgerButton:hover{
+            background-color: lightgray;
+        }
+        
+
+       
+        img{
+            // margin-left: 50px;
+            // display: none;
+            width: 0;
+            height: auto;
+        }
+        
+    }
+
+    .homeContainer{
+        transition: 0.3s all;
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+
+        ul{
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 15px;
+        }
+        
+        .links{
+            transition: 0.3s all;
+            // width: 80%;
+            font-size: 0;
+            margin-bottom: 30px;
+            margin-left: 25px;
+            padding: 3px 4px;
+            column-gap: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        ul>li>i{
+            font-size: 2rem;
+        }
+    }
+   
+
+
+    .libraryContainer{
+        transition: 0.3s all;
+        display: none;
+        width: 100%;
+        margin-top: 40PX;
+        position: relative;
+
+        ul{
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 15px;
+        }
+        
+        .links{
+            transition: 0.3s all;
+            width: 80%;
+            font-size: 0;
+            margin-left: 20px;
+            padding: 3px 4px;
+            column-gap: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+        ul>li>i{
+            font-size: 1.5rem;
+        }
+    }
+    .links:hover{
+        background-color: lightgray;
+
+    }
+
+}
+
+.active{
+    background-color: lightgray;
+}
+
+
